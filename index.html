@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ecommerce WebApp - Home</title>
+        <!-- bootstrap icons link-->
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
+  </head>
+  <body>
+    <!-- Mobile Navigation Menu -->
+    <header class="container">
+    <nav class="mobilemenu">
+    <ul class="mobilenav-items">
+    <div class="first-items">
+  <li><i class="bi bi-list"id="menubtn"></i></li>
+  <img src="assets/img/logo.png"  class="mobilemenulogo"/>
+
+    </div>
+    <div class="second-items">
+      <li class="account"><i class="bi bi-person"></i></li>
+       <li class="cart"><i class="bi bi-cart carts"></i><span class="cartnumber">0</span></li>
+    </div>
+    </ui>
+    </nav>
+    </header>
+    
+       <!-- mobile floating Menu -->
+       <div class="wrapper">
+       		<div class="banner">
+       		<h4 class="banner-title">Menu</h4>
+       		<a href="#" class="banner-close"><i class="bi bi-x-circle close"></i></a>
+       		</div>
+       		<div class="row">
+       		<div class="column1"> 
+       		<a href="#"><span><i class="bi bi-archive"></i></span>Trouser</a>
+       		<a href="#"><span><i class="bi bi-backpack2"></i></span>Boys Wear</a>
+       		<a href="#"><span><i class="bi bi-smartwatch"></i></span>Smart Watches</a>
+       		<a href="#"><span><i class="bi bi-bounding-box"></i></span>Caps</a>
+       		<a href="#"><span><i class="bi bi-box"></i></span>Discounts</a>
+       		</div>
+       		<div class="column2">
+       		<a href="#"><span><i class="bi bi-archive"></i></span>Trouser</a>
+       		<a href="#"><span><i class="bi bi-backpack2"></i></span>Boys Wear</a>
+       		<a href="#"><span><i class="bi bi-smartwatch"></i></span>Smart Watches</a>
+       		<a href="#"><span><i class="bi bi-bounding-box"></i></span>Caps</a>
+       		</div>
+       		</div>
+       		<hr style="color:#fff7f3;">
+       		<div class="bottom-menu">
+       		<a href="#"class="active"><i class="bi bi-house-door"></i>Home</a>
+       		<a href="#"><i class="bi bi-info-circle"></i>About us</a>
+       		<a href="#"><i class="bi bi-bag"></i>Shop</a>
+       		<a href="#"><i class="bi bi-telephone"></i>Contact</a>
+       		<a href="#"><i class="bi bi-question-circle"></i>Faq</a>
+       		<a href="#"><i class="bi bi-file-earmark-lock2"></i>Privay Policy</a>
+       		<a href="#"><i class="bi bi-person-lock"></i>Terms Condition</a>
+       		</div>
+       </div>
+       
+       
+       
+    <!-- Cart Sidebar  -->
+    
+    <div class="wrapper2">
+    <div class="banner2">
+       		<h4 class="banner-title">Menu</h4>
+       		<a href="#" class="banner-close"><i class="bi bi-x-circle close"></i></a>
+       		</div>
+    
+    </div>
+   
+   </div>
+    <style>
+    *{
+    	margin:0;
+    	padding:0;
+    }
+    .container{
+    	
+    	padding:20px;
+    	background:lightgrey;
+    }
+    .mobilenav-items{
+    	display:flex;
+    	align-items:center;
+    	justify-content:space-between;
+    }
+    .first-items li{
+    	list-style:none;
+    }
+    .second-items li{
+    	list-style:none;
+    }
+    
+    .first-items li i{
+    	font-size:28px;
+    }
+    .second-items li  > i{
+    	font-size:22px;
+    }
+    .second-items{
+    	display:flex;
+    	align-items:center;
+    	gap:14px;
+    }
+    .first-items{
+   	 display:flex;
+    	align-items:center;
+    	gap:14px;
+    }
+    
+    .mobilemenulogo{
+    	width:100px;
+    
+    }
+    .cart{
+    	position:relative;
+    }
+    .cartnumber{
+    		width:10px;
+    		height:10px;
+    		position:absolute;
+    		background-color:red;
+    		color:white;
+    		padding:4.5px;
+    		font-size:13px;
+    		border-radius:50px;
+    		top:-6px;
+    		right:-4px;
+    		display:flex;
+    		align-items:center;
+    		justify-content:center;
+    		
+    }
+    /* floating mobile menu */
+    
+    .wrapper{
+    	position:absolute;
+    	width:100%;
+    	height:170vh;
+    	transform:translateX(-100%);
+    	transition:0.5s ease-in-out;
+    	top:0;
+    	
+    }
+    .showmenu{
+    transform:translateX(0);
+    }
+    .banner{
+    background:#fff7f3;
+    height:70px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding-right:20px;
+    padding-left:20px;
+    }
+    .row{
+    	background:white;
+    	padding-top:25px;
+    	padding-left:10px;	
+    	display:flex; 
+    	
+    	justify-content:space-around;
+    }
+    
+    .banner-close{
+    	text-decoration:none;
+    	background:#fff7f3;
+    	width:40px;
+    	height:40px;
+    	display:flex;
+    	align-items:center;
+    	justify-content:center;
+    	border-radius:50px;
+    	
+    }
+    .banner-title{
+    	color:red;
+    	font-weight:bold;
+    }
+    .close{
+    		font-size:22px;
+    		color:red;
+    }
+    .close:hover{
+    		color:red;
+    }
+    .column1{
+    	width:50%;
+    	display:flex;
+    	flex-direction:column;
+    	gap:15px;
+    	
+    }
+     .column2{
+    	width:50%;
+    	display:flex;
+    	flex-direction:column;
+    	gap:15px;
+    }
+      .column1 a{
+    	padding:10px;
+    	text-decoration:none;
+    	margin-left:10px;
+    	margin-bottom:10px;
+    	color:black;
+    	font-size:15px;
+    	
+    }
+    .column1 a:hover{
+    
+    	background-color:#fff7f3;
+    	border-radius:10px;
+    	
+    	}
+    	 .column2 a:hover{
+    
+    	background-color:#fff7f3;
+    	border-radius:10px;
+    	
+    	}
+    .column2 a{
+    
+    	text-decoration:none;
+    	margin-left:10px;
+    	margin-bottom:10px;
+    	color:black;
+    	padding:10px;
+    	font-size:15px;
+    }
+    .column1 a span{
+	margin-right:10px;
+	background:#fff7f3;
+	padding:10px;
+	border-radius:20px;
+	font-size:16px;
+	color:black;
+	display:inline;
+	
+	}
+	 .column2  span{
+	margin-right:10px;
+	background:#fff7f3;
+	padding:10px;
+	border-radius:20px;
+	font-size:16px;
+	color:black;
+	display:inline;
+	
+	}
+	
+	.bottom-menu{
+	margin-top:10px;
+	padding-left:40px;
+	padding-top:20px;
+	display: flex;
+	flex-direction:column;
+	gap:16px;
+	
+	}
+	.bottom-menu a{
+	text-decoration:none;
+	font-size:15px;
+	color:black;
+	padding:10px;
+	width:80%;
+	
+	}
+	.bottom-menu a:hover{
+	background-color:#fff7f3
+	}
+	
+	.bottom-menu i{
+		margin-right:10px;
+		font-size:20px;
+	}
+	.active{
+		background-color:#fff7f3
+	}
+	#menubtn{
+		cursor:pointer;
+	
+	}
+	.account{
+	cursor:pointer;
+	}
+	.account:hover{
+	color:#ed4c07;
+		
+	}
+	.carts{
+	cursor:pointer;
+	color:black;
+	
+	}
+	.carts:hover{
+	
+	color:#ed4c07;		
+	
+	}
+	
+	#menubtn:hover , #menubtn:focus{
+	color:#ed4c07;
+	}
+	
+	
+	/* cart side bar  */
+	.wrapper2{
+	position:absolute;
+    	width:50%;
+    	height:100vh;
+    	
+    
+    	top:0;
+    	right:0;
+    	background:red;
+	
+	}
+	.banner2{
+	
+	 background:#fff7f3;
+    height:70px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding-right:20px;
+    padding-left:20px;
+	
+	}
+    </style>
+ 
+    <script>
+     let closebtn = document.querySelector('.close');
+       let menubtn = document.querySelector('#menubtn');
+    let floatingmobilemenu = document.querySelector('.wrapper');
+    
+    menubtn.addEventListener("click", function(){
+    	floatingmobilemenu.classList.add('showmenu');
+    }); 
+     closebtn.addEventListener("click", function(){
+    	floatingmobilemenu.classList.remove('showmenu');
+    }); 
+    </script>
+  </body>
+</html>
